@@ -9,7 +9,6 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
-develop-eggs/
 dist/
 downloads/
 eggs/
@@ -160,4 +159,4 @@ cython_debug/
 .idea/
 
 # User-specific stuff
-/zenml-projects/
+zenml-projects/
