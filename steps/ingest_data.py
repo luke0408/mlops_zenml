@@ -25,13 +25,15 @@ def ingest_df(data_path: str) -> pd.DataFrame:
     """
     Ingesting the data from the data_path
 
-    :param data_path: path to the data
-
-    :return: pd.DataFrame: the data
+    Args:
+        data_path: path to the data
+    Returns:
+        df: Input dataframe
     """
     try:
         data = IngestData(data_path)
         df = data.get_data()
+        logging.info("Data ingestion completed {}".format(df.columns))
         return df
     except Exception as e:
         logging.error(f"Error in ingesting data: {e}")
